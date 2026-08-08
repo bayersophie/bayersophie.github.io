@@ -3,18 +3,28 @@ import type { Project } from "../data/projects";
 
 type ProjectCardProps = {
   project: Project;
+  index: number;
 };
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <article className="project-card">
-      <Link to={`/projects/${project.id}`} className="project-card-link">
+      <Link
+        to={`/projects/${project.id}`}
+        className="project-card-link"
+      >
         <div className="project-image">
-          <img src={project.image} alt={project.title} />
+          <img src={project.images[0]} alt={project.title} />
         </div>
 
         <div className="project-info">
-          <p className="project-category">{project.category}</p>
+          <div className="project-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+
+          <p className="project-category">
+            {project.category}
+          </p>
 
           <h3>{project.title}</h3>
 
