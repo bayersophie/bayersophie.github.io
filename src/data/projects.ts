@@ -5,6 +5,8 @@ export type Project = {
     description: string;
     tools: string[];
     image: string;
+    details?: string;
+    github?: string;
   };
   
   export const projects: Project[] = [
@@ -16,6 +18,8 @@ export type Project = {
         "Business- und Corporate-Fotografie mit Fokus auf authentische und professionelle Bildsprache.",
       tools: ["Photography", "Lightroom"],
       image: "/projects/corporate-photography.jpg",
+      details:
+        "Fotografische Arbeiten aus dem Business- und Corporate-Bereich.",
     },
   
     {
@@ -26,6 +30,9 @@ export type Project = {
         "Ein Physical-Computing-Projekt mit Arduino, Sensorik und eigener Programmierung.",
       tools: ["Arduino", "C++", "Sensorik"],
       image: "/projects/arduino-project.jpg",
+      details:
+        "Entwicklung eines interaktiven Hardware-Projekts mit Arduino und Sensorik.",
+      github: "https://github.com/",
     },
   
     {
@@ -36,6 +43,8 @@ export type Project = {
         "Konzeption und Gestaltung visueller Inhalte für Social Media, darunter Header und Logo.",
       tools: ["Photoshop", "Illustrator"],
       image: "/projects/social-media-design.jpg",
+      details:
+        "Entwicklung einer visuellen Gestaltung für Social Media mit Fokus auf Wiedererkennbarkeit und konsistentes Branding.",
     },
   
     {
@@ -46,6 +55,8 @@ export type Project = {
         "Gestaltung von visuellen Layouts und Grafikelementen für Twitch-Streams.",
       tools: ["Photoshop", "Illustrator"],
       image: "/projects/streaming-layouts.jpg",
+      details:
+        "Konzeption und Gestaltung verschiedener visueller Elemente für einen Twitch-Auftritt.",
     },
   
     {
@@ -56,5 +67,7 @@ export type Project = {
         "Konzeption und Gestaltung eines digitalen Semesterplaners.",
       tools: ["InDesign", "Layout", "Typography"],
       image: "/projects/semester-planner.jpg",
+      details:
+        "Gestaltung eines übersichtlichen Planers zur Organisation des Studienalltags.",
     },
   ];
