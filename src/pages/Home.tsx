@@ -1,23 +1,32 @@
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects";
+
 function Home() {
     return (
       <main>
-        <section>
-          <p>Media Engineering Student</p>
+        <section className="hero">
+          <p className="hero-label">Media Engineering Student</p>
   
-          <h1>Sophie Bayer</h1>
+          <h1>
+            Sophie
+            <br />
+            Bayer
+          </h1>
   
-          <p>
+          <p className="hero-description">
             Photography · Development · Design
           </p>
         </section>
   
         <section id="work">
-          <h2>Selected Work</h2>
-  
-          <p>
-            A selection of projects from photography, development and design.
-          </p>
-        </section>
+  <p className="eyebrow">Selected Work</p>
+
+  <div className="projects">
+    {projects.map((project) => (
+      <ProjectCard key={project.id} project={project} />
+    ))}
+  </div>
+</section>
   
         <section id="about">
           <h2>About</h2>
@@ -31,9 +40,7 @@ function Home() {
         <section id="contact">
           <h2>Contact</h2>
   
-          <p>
-            Get in touch.
-          </p>
+          <p>Get in touch.</p>
         </section>
       </main>
     );
