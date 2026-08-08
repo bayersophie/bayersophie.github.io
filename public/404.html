@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script>
+      const path = window.location.pathname;
+      const query = window.location.search;
+      const hash = window.location.hash;
+
+      sessionStorage.redirect = path + query + hash;
+    </script>
+
+    <meta http-equiv="refresh" content="0;URL='/'" />
+  </head>
+
+  <body>
+  </body>
+</html>
