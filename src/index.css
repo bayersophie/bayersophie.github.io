@@ -149,9 +149,29 @@ p {
    Navigation
    ========================================================= */
 
+/*
+   Fixed glass navigation
+
+   The header stays visible while scrolling.
+   The background is slightly transparent and blurred,
+   allowing the content underneath to remain subtly visible.
+*/
+
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 24px;
+
+  z-index: 1000;
+
+  padding: 16px 24px;
+
+  background: rgba(248, 247, 242, 0.78);
+  border-bottom: 1px solid rgba(220, 217, 205, 0.75);
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .navigation {
@@ -203,6 +223,15 @@ p {
 
 .language-switch:hover {
   border-color: var(--accent);
+}
+
+/*
+   Prevent the fixed header from covering the beginning
+   of the page content.
+*/
+
+main {
+  padding-top: 72px;
 }
 
 /* =========================================================
@@ -677,6 +706,14 @@ p {
   margin-bottom: 32px;
 }
 
+/*
+   Masonry-style layout
+
+   Images keep their natural aspect ratio.
+   Portrait and landscape images can sit
+   next to each other without fixed heights.
+*/
+
 .photography-gallery-grid {
   columns: 2;
   column-gap: 32px;
@@ -786,6 +823,7 @@ p {
 @media (max-width: 900px) {
   main {
     width: min(1100px, calc(100% - 48px));
+    padding-top: 68px;
   }
 
   .projects {
@@ -821,49 +859,29 @@ p {
    ========================================================= */
 
 @media (max-width: 700px) {
-  /*
-     Fixed mobile navigation
-     -----------------------
-     The header stays visible while scrolling.
-     The background is slightly transparent and blurred.
-  */
-
-  .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 72px;
-
-    padding: 0 20px;
-
-    display: flex;
-    align-items: center;
-
-    z-index: 1000;
-
-    background: rgba(248, 247, 242, 0.78);
-
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-
-    border-bottom: 1px solid rgba(220, 217, 205, 0.7);
-  }
-
-  .navigation {
-    width: 100%;
-    height: 100%;
-  }
-
-  /*
-     Space for the fixed header so that
-     content does not disappear underneath it.
-  */
-
   main {
     width: min(100% - 40px, 700px);
     padding-top: 72px;
+  }
+
+  .site-header {
+    padding: 14px 20px;
+  }
+
+  .navigation {
+    min-height: 40px;
+  }
+
+  .site-name {
+    font-size: 1.05rem;
+  }
+
+  .navigation-links {
+    gap: 14px;
+  }
+
+  .navigation-links a {
+    font-size: 0.95rem;
   }
 
   .projects {
@@ -925,22 +943,9 @@ p {
    ========================================================= */
 
 @media (max-width: 600px) {
-  .site-header {
-    height: 64px;
-    padding: 0 16px;
-  }
-
-  .navigation-links {
-    gap: 16px;
-  }
-
-  .navigation-links a {
-    font-size: 1.025rem;
-  }
-
   main {
     width: min(100% - 32px, 1200px);
-    padding-top: 64px;
+    padding-top: 68px;
   }
 
   section {
@@ -953,6 +958,22 @@ p {
 
   h2 {
     font-size: 2.625rem;
+  }
+
+  .site-header {
+    padding: 12px 16px;
+  }
+
+  .navigation-links {
+    gap: 12px;
+  }
+
+  .navigation-links a {
+    font-size: 0.9rem;
+  }
+
+  .language-switch {
+    padding: 4px 10px;
   }
 }
 
@@ -1053,7 +1074,7 @@ section {
   animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Scroll-triggered reveal */
+/* Scroll-triggered reveal, toggled by the useReveal hook */
 
 .reveal {
   opacity: 0;
