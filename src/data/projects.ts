@@ -137,14 +137,15 @@ export const projects: Project[] = [
     tools: ["Photography", "Lightroom"],
 
     images: [
-      "/projects/corporate-1.jpg",
-      "/projects/corporate-2.jpg",
-      "/projects/corporate-3.jpg",
-      "/projects/corporate-4.jpg",
-      "/projects/corporate-5.jpg",
-      "/projects/corporate-6.jpg",
-      "/projects/corporate-7.jpg",
-      "/projects/corporate-8.jpg",
+      "/projects/photography/corporate/corporate-1.jpg",
+      "/projects/photography/corporate/corporate-2.jpg",
+      "/projects/photography/corporate/corporate-3.jpg",
+      "/projects/photography/corporate/corporate-4.jpg",
+      "/projects/photography/corporate/corporate-5.jpg",
+      "/projects/photography/corporate/corporate-7.jpg",
+      "/projects/photography/corporate/corporate-8.jpg",
+      "/projects/photography/corporate/corporate-9.jpg",
+      "/projects/photography/corporate/corporate-10.jpg",
     ],
 
     details: {
@@ -174,9 +175,12 @@ export const projects: Project[] = [
     tools: ["Photography", "Lightroom"],
 
     images: [
-      "/projects/maternity-1.jpg",
-      "/projects/maternity-2.jpg",
-      "/projects/maternity-3.jpg",
+      "/projects/photography/maternity/maternity-1.jpg",
+      "/projects/photography/maternity/maternity-2.jpg",
+      "/projects/photography/maternity/maternity-3.jpg",
+      "/projects/photography/maternity/maternity-4.jpg",
+      "/projects/photography/maternity/maternity-5.jpg",
+      "/projects/photography/maternity/maternity-6.jpg",
     ],
 
     details: {
@@ -206,9 +210,14 @@ export const projects: Project[] = [
     tools: ["Photography", "Lightroom"],
 
     images: [
-      "/projects/animals-1.jpg",
-      "/projects/animals-2.jpg",
-      "/projects/animals-3.jpg",
+      "/projects/photography/animals/animals-1.jpg",
+      "/projects/photography/animals/animals-2.jpg",
+      "/projects/photography/animals/animals-3.jpg",
+      "/projects/photography/animals/animals-4.jpg",
+      "/projects/photography/animals/animals-5.jpg",
+      "/projects/photography/animals/animals-6.jpg",
+      "/projects/photography/animals/animals-7.jpg",
+      "/projects/photography/animals/animals-8.jpg",
     ],
 
     details: {
