@@ -149,9 +149,13 @@ function Home({ language }: HomeProps) {
               ))}
           </div>
 
-          <a href="/cv.pdf" download className="cv-download">
-            {text.downloadCv}
-          </a>
+          <a
+  href={language === "de" ? "/cv-de.pdf" : "/cv-en.pdf"}
+  download
+  className="cv-download"
+>
+  {text.downloadCv}
+</a>
         </div>
       </section>
     </main>
