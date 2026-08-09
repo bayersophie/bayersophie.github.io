@@ -1,20 +1,28 @@
 import { Link } from "react-router-dom";
-import type { Project } from "../data/projects";
+import type { Language, Project } from "../data/projects";
 
 type ProjectCardProps = {
   project: Project;
   index: number;
+  language: Language;
 };
 
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({
+  project,
+  index,
+  language,
+}: ProjectCardProps) {
   return (
     <article className="project-card">
       <Link
-        to={`/projects/${project.id}`}
+        to={`/${language}/projects/${project.id}`}
         className="project-card-link"
       >
         <div className="project-image">
-          <img src={project.images[0]} alt={project.title} />
+          <img
+            src={project.images[0]}
+            alt={project.title[language]}
+          />
         </div>
 
         <div className="project-info">
@@ -23,14 +31,10 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           <p className="project-category">
-            {project.category}
+            {project.category[language]}
           </p>
 
-          <h3>{project.title}</h3>
-
-          <p className="project-description">
-            {project.description}
-          </p>
+          <h3>{project.title[language]}</h3>
 
           <div className="project-tools">
             {project.tools.map((tool) => (

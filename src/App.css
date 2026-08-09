@@ -6,8 +6,8 @@
   --ink-soft: #5b6058;
   --ink-faint: #8b8f86;
   --line: #dcd9cd;
-  --accent: #13441E;
-  --accent-soft: #ECECEC;
+  --accent: #13441e;
+  --accent-soft: #ececec;
 
   font-family: "Inter", sans-serif;
   color: var(--ink);
@@ -18,7 +18,9 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* Reset */
+/* =========================================================
+   Reset
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -51,14 +53,16 @@ select {
   font: inherit;
 }
 
-/* Layout */
+/* =========================================================
+   Layout
+   ========================================================= */
 
 #root {
   min-height: 100vh;
 }
 
 main {
-  width: min(1200px, calc(100% - 48px));
+  width: min(1280px, calc(100% - 48px));
   margin: 0 auto;
 }
 
@@ -80,18 +84,20 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 3.125rem;
   line-height: 1;
   letter-spacing: -0.04em;
   margin-bottom: 24px;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.225rem;
   max-width: 600px;
 }
 
-/* Hero */
+/* =========================================================
+   Hero
+   ========================================================= */
 
 .hero {
   min-height: 70vh;
@@ -112,28 +118,30 @@ p {
 
 .hero-description {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--accent);
   margin: 0 0 24px;
 }
 
 .hero-intro {
   max-width: 520px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   color: var(--ink-soft);
   margin: 0;
 }
 
-/* Navigation */
+/* =========================================================
+   Navigation
+   ========================================================= */
 
 .site-header {
   width: 100%;
-  padding: 24px 24px;
+  padding: 24px;
 }
 
 .navigation {
-  width: min(1200px, 100%);
+  width: min(1280px, 100%);
   margin: 0 auto;
 
   display: flex;
@@ -154,7 +162,7 @@ p {
 
 .navigation-links a {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1.075rem;
   white-space: nowrap;
 }
 
@@ -163,17 +171,31 @@ p {
   opacity: 1;
 }
 
-/* Project Cards */
+/* =========================================================
+   Project Grid
+   ========================================================= */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 36px;
+  row-gap: 0;
+}
+
+/* =========================================================
+   Project Cards
+   ========================================================= */
 
 .project-card {
-  padding: 48px 0;
+  padding: 32px 0 52px;
   border-top: 1px solid var(--line);
 }
 
 .project-card-link {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
   color: inherit;
   text-decoration: none;
 }
@@ -181,7 +203,7 @@ p {
 .project-image {
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #ECECEC;
+  background: #ececec;
 }
 
 .project-image img {
@@ -189,46 +211,51 @@ p {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
 }
 
 .project-card-link:hover .project-image img {
-  transform: scale(1.03);
+  transform: scale(1.035);
 }
+
+/* Project information */
 
 .project-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .project-number {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--ink-faint);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .project-category {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent);
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .project-info h3 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 32px;
+  font-size: 31px;
   line-height: 1;
+  letter-spacing: -0.02em;
   margin: 0 0 16px;
+
+  transition: transform 0.35s ease;
 }
 
-.project-description {
-  color: var(--ink-soft);
-  line-height: 1.6;
-  margin: 0 0 24px;
+.project-card-link:hover .project-info h3 {
+  transform: translateX(4px);
 }
 
 .project-tools {
@@ -237,7 +264,9 @@ p {
   gap: 6px;
 }
 
-/* Project Page */
+/* =========================================================
+   Project Page
+   ========================================================= */
 
 .project-page {
   padding: 48px 0;
@@ -249,20 +278,27 @@ p {
 
 .back-link {
   display: inline-block;
+
   font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--ink-soft);
+
   text-decoration: none;
   margin-bottom: 40px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .back-link:hover {
   color: var(--accent);
+  transform: translateX(-3px);
 }
 
 .project-page h1 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: clamp(50px, 8vw, 98px);
   line-height: 0.95;
   letter-spacing: -0.05em;
   margin: 0 0 32px;
@@ -270,19 +306,23 @@ p {
 
 .project-page .project-description {
   max-width: 650px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 24px;
 }
 
-/* Project Concept */
+/* =========================================================
+   Project Concept
+   ========================================================= */
 
 .project-concept {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 40px;
+
   margin-top: 48px;
   padding-top: 32px !important;
+
   border-top: 1px solid var(--line);
 }
 
@@ -296,7 +336,7 @@ p {
 
 .concept-content p {
   color: var(--ink-soft);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
   margin: 0 0 20px;
 }
@@ -310,12 +350,15 @@ p {
   font-weight: 600;
 }
 
-/* Visual Identity */
+/* =========================================================
+   Visual Identity
+   ========================================================= */
 
 .project-visual-identity {
   margin-top: 32px;
   padding-top: 32px !important;
   padding-bottom: 8px !important;
+
   border-top: 1px solid var(--line);
 }
 
@@ -327,7 +370,7 @@ p {
 }
 
 .visual-identity-item {
-  background: #ECECEC;
+  background: #ececec;
   overflow: hidden;
 }
 
@@ -340,35 +383,45 @@ p {
 .visual-identity-logo {
   width: 240px;
   height: 240px;
+
   border-radius: 50%;
-  background: #ECECEC;
+  background: #ececec;
+
   display: flex;
   align-items: center;
   justify-content: center;
   justify-self: center;
+
   overflow: hidden;
 }
 
 .visual-identity-logo img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   border-radius: 50%;
+
   display: block;
 }
 
-/* Color Palette */
+/* =========================================================
+   Color Palette
+   ========================================================= */
 
 .color-palette {
   width: calc((100% - 32px) * 0.6);
+
   display: flex;
   gap: 12px;
+
   margin-top: 16px;
   margin-bottom: 8px;
 }
 
 .color-swatch {
   flex: 1;
+
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -377,24 +430,29 @@ p {
 .color-swatch-preview {
   width: 100%;
   height: 60px;
+
   border-radius: 8px;
 }
 
 .color-swatch span {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--ink-faint);
 }
 
-/* Product Photography */
+/* =========================================================
+   Product Photography
+   ========================================================= */
 
 .project-product-photography {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 40px;
+
   margin-top: 32px;
   padding-top: 32px !important;
   padding-bottom: 8px !important;
+
   border-top: 1px solid var(--line);
 }
 
@@ -408,13 +466,14 @@ p {
 
 .product-photography-content > p {
   color: var(--ink-soft);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
   margin: 0 0 24px;
 }
 
 .product-photo-grid {
   width: 100%;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -423,24 +482,29 @@ p {
 .product-photo {
   width: 100%;
   overflow: hidden;
-  background: #ECECEC;
+  background: #ececec;
 }
 
 .product-photo img {
   width: 100%;
   height: auto;
+
   display: block;
 }
 
-/* Project Details */
+/* =========================================================
+   Project Details
+   ========================================================= */
 
 .project-details {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 40px;
+
   margin-top: 56px;
   padding-top: 32px !important;
   padding-bottom: 0 !important;
+
   border-top: 1px solid var(--line);
 }
 
@@ -454,7 +518,7 @@ p {
 
 .details-content p {
   color: var(--ink-soft);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
   margin: 0 0 20px;
 }
@@ -468,12 +532,15 @@ p {
   font-weight: 600;
 }
 
-/* GitHub */
+/* =========================================================
+   GitHub
+   ========================================================= */
 
 .project-github {
   margin-top: 40px;
   padding-top: 32px !important;
   padding-bottom: 0 !important;
+
   border-top: 1px solid var(--line);
 }
 
@@ -483,7 +550,7 @@ p {
 
 .project-github a {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--accent);
 }
 
@@ -491,28 +558,266 @@ p {
   text-decoration: underline;
 }
 
-/* Chips */
+/* =========================================================
+   Chips
+   ========================================================= */
 
 .chip {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink-soft);
-  background: #ECECEC;
+
+  background: #ececec;
   border: 1px solid var(--line);
   border-radius: 20px;
-  padding: 7px 14px;
+
+  padding: 6px 12px;
+
   white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
-/* Responsive */
+.project-card-link:hover .chip {
+  border-color: #c9c6b9;
+}
+
+/* =========================================================
+   Photography Pages
+   ========================================================= */
+
+.photography-page {
+  padding-bottom: 120px;
+}
+
+/* Photography introduction */
+
+.photography-intro {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+
+  margin-top: 64px;
+  padding-top: 32px !important;
+  padding-bottom: 8px !important;
+
+  border-top: 1px solid var(--line);
+}
+
+.photography-intro-label .eyebrow {
+  margin: 0;
+}
+
+.photography-intro-content {
+  max-width: 680px;
+}
+
+.photography-intro-content p {
+  color: var(--ink-soft);
+  font-size: 19px;
+  line-height: 1.7;
+
+  margin: 0 0 24px;
+}
+
+.photography-intro-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Photography Gallery
+   ========================================================= */
+
+.photography-gallery {
+  margin-top: 64px;
+
+  padding-top: 32px !important;
+  padding-bottom: 0 !important;
+
+  border-top: 1px solid var(--line);
+}
+
+.photography-gallery > .eyebrow {
+  margin-bottom: 32px;
+}
+
+/*
+   Masonry-style layout
+
+   Images keep their natural aspect ratio.
+   This means portrait and landscape images
+   can sit next to each other without fixed
+   heights or overlapping elements.
+*/
+
+.photography-gallery-grid {
+  columns: 2;
+  column-gap: 32px;
+
+  width: 100%;
+}
+
+.photography-gallery-item {
+  width: 100%;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+
+  margin-bottom: 32px;
+
+  overflow: hidden;
+  background: #ececec;
+}
+
+.photography-gallery-item img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+.photography-gallery-item:hover img {
+  transform: scale(1.015);
+}
+
+/* =========================================================
+   Photography Details
+   ========================================================= */
+
+.photography-details {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+
+  margin-top: 56px;
+  padding-top: 32px !important;
+  padding-bottom: 0 !important;
+
+  border-top: 1px solid var(--line);
+}
+
+.photography-details-label .eyebrow {
+  margin: 0;
+}
+
+.photography-details-content {
+  max-width: 680px;
+}
+
+.photography-details-content > p {
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.7;
+
+  margin: 0 0 40px;
+}
+
+/* =========================================================
+   Photography Metadata
+   ========================================================= */
+
+.photography-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+
+  padding-top: 28px;
+
+  border-top: 1px solid var(--line);
+}
+
+.photography-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.photography-meta-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: var(--ink-faint);
+}
+
+.photography-meta-value {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+
+  color: var(--ink);
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  main {
+    width: min(1100px, calc(100% - 48px));
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+
+  .project-info h3 {
+    font-size: 29px;
+  }
+
+  .photography-intro,
+  .photography-details {
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+  }
+
+  .photography-intro-content p {
+    font-size: 18px;
+  }
+
+  .photography-gallery-grid {
+    column-gap: 24px;
+  }
+
+  .photography-gallery-item {
+    margin-bottom: 24px;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
 
 @media (max-width: 700px) {
-  .project-card-link {
+  main {
+    width: min(100% - 40px, 700px);
+  }
+
+  .projects {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 32px 0 44px;
+  }
+
+  .project-card-link {
     gap: 24px;
   }
 
   .project-info {
     padding-bottom: 16px;
+  }
+
+  .project-info h3 {
+    font-size: 30px;
   }
 
   .visual-identity-grid {
@@ -525,7 +830,9 @@ p {
 
   .project-concept,
   .project-product-photography,
-  .project-details {
+  .project-details,
+  .photography-intro,
+  .photography-details {
     grid-template-columns: 1fr;
     gap: 16px;
   }
@@ -537,7 +844,19 @@ p {
   .product-photo-grid {
     grid-template-columns: 1fr;
   }
+
+  .photography-gallery-grid {
+    columns: 1;
+  }
+
+  .photography-gallery-item {
+    margin-bottom: 24px;
+  }
 }
+
+/* =========================================================
+   Small Mobile
+   ========================================================= */
 
 @media (max-width: 600px) {
   main {
@@ -553,13 +872,21 @@ p {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.625rem;
   }
 
   .navigation-links {
     gap: 16px;
   }
+
+  .navigation-links a {
+    font-size: 1.025rem;
+  }
 }
+
+/* =========================================================
+   Scroll positioning
+   ========================================================= */
 
 section {
   scroll-margin-top: 80px;
