@@ -28,8 +28,9 @@ function Home({ language }: HomeProps) {
       contactTitle: "Let's get in touch.",
       contactIntro:
         "I'd love to hear from you — whether it's about a project, an open position, or just to connect.",
-      location: "Nuremberg / Fürth, Germany — available on-site and remotely",
+      location: "Nuremberg/Fürth, Germany",
       availability: "Open to: working student roles · internships",
+      workMode: "Available on-site and remotely",
       downloadCv: "Download CV",
     },
 
@@ -52,8 +53,9 @@ function Home({ language }: HomeProps) {
       contactTitle: "Lass uns ins Gespräch kommen.",
       contactIntro:
         "Ich freue mich über eine Nachricht – ob zu einem Projekt, einer offenen Stelle oder einfach zum fachlichen Austausch.",
-      location: "Nürnberg / Fürth — vor Ort und remote verfügbar",
+      location: "Nürnberg/Fürth",
       availability: "Offen für: Werkstudentenstellen · Praktika",
+      workMode: "Vor Ort und remote verfügbar",
       downloadCv: "Lebenslauf herunterladen",
     },
   };
@@ -127,6 +129,7 @@ function Home({ language }: HomeProps) {
         <div className="contact-meta">
           <span className="chip">{text.location}</span>
           <span className="chip">{text.availability}</span>
+          <span className="chip">{text.workMode}</span>
         </div>
 
         <a href="mailto:bayer.sophie@outlook.de" className="contact-email">
