@@ -595,11 +595,251 @@ main {
   font-weight: 600;
 }
 
+```css
+/* =========================================================
+   Interactive Greenhouse
+   ========================================================= */
+
+/* Project gallery sections */
+
+.project-gallery-section {
+  margin-top: 56px;
+  padding-top: 32px !important;
+  padding-bottom: 0 !important;
+
+  border-top: 1px solid var(--line);
+}
+
+.project-gallery-section .section-label {
+  margin-bottom: 32px;
+}
+
+.project-gallery-section .section-label .eyebrow {
+  margin: 0;
+}
+
+
+/* Gallery */
+
+.project-gallery {
+  width: 100%;
+  display: grid;
+  gap: 24px;
+}
+
+.project-gallery-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-gallery-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-gallery-item {
+  width: 100%;
+  overflow: hidden;
+  background: #ececec;
+}
+
+.project-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+.project-gallery-item:hover img {
+  transform: scale(1.015);
+}
+
+
+/* Technical setup */
+
+.project-details .details-content h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+  margin: 0 0 16px;
+}
+
+.project-details .details-content h3:not(:first-child) {
+  margin-top: 40px;
+}
+
+.project-details .details-content ul {
+  margin: 0;
+  padding-left: 20px;
+
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.project-details .details-content li {
+  margin-bottom: 6px;
+}
+
+.project-details .details-content li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Data flow */
+
+.project-data-flow {
+  display: inline-block;
+
+  max-width: 100%;
+  margin: 0 0 24px !important;
+  padding: 14px 18px;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+
+  color: var(--ink) !important;
+
+  background: #ececec;
+  border: 1px solid var(--line);
+}
+
+
+/* Interaction list */
+
+.project-details .details-content ul + p {
+  margin-top: 24px;
+}
+
+
+/* Code */
+
+.project-code {
+  margin-top: 56px;
+  padding-top: 32px !important;
+  padding-bottom: 0 !important;
+
+  border-top: 1px solid var(--line);
+}
+
+.project-code > .section-label {
+  margin-bottom: 32px;
+}
+
+.project-code > .section-label .eyebrow {
+  margin: 0;
+}
+
+.project-code-block {
+  margin-bottom: 48px;
+}
+
+.project-code-block:last-child {
+  margin-bottom: 0;
+}
+
+.project-code-block h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+  margin: 0 0 20px;
+}
+
+.project-code-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  background: #ececec;
+  border: 1px solid var(--line);
+}
+
+/* =========================================================
+   Interactive Greenhouse
+   ========================================================= */
+
+.hardware-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.hardware-gallery-item {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.hardware-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   Interactive Greenhouse — Responsive
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .project-gallery-three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .project-gallery-three {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .hardware-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-gallery {
+    gap: 20px;
+  }
+
+  .project-code {
+    margin-top: 48px;
+  }
+
+  .project-code-block {
+    margin-bottom: 40px;
+  }
+
+  .project-code-block h3 {
+    font-size: 21px;
+  }
+
+  .project-data-flow {
+    font-size: 12px !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+}
+
+
 /* =========================================================
    GitHub
    ========================================================= */
 
 .project-github {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+
   margin-top: 40px;
   padding-top: 32px !important;
   padding-bottom: 0 !important;
@@ -608,13 +848,14 @@ main {
 }
 
 .project-github .eyebrow {
-  margin-bottom: 12px;
+  margin: 0;
 }
 
 .project-github a {
   font-family: "IBM Plex Mono", monospace;
   font-size: 15px;
   color: var(--accent);
+  align-self: start;
 }
 
 .project-github a:hover {

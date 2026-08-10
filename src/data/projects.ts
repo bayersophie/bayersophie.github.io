@@ -25,11 +25,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "arduino-project",
+    id: "interactive-greenhouse",
 
     title: {
-      en: "Arduino",
-      de: "Arduino",
+      en: "Interactive Greenhouse",
+      de: "Interaktives Gewächshaus",
     },
 
     category: {
@@ -38,13 +38,24 @@ export const projects: Project[] = [
     },
 
     description: {
-      en: "A physical computing project combining Arduino, sensors and custom programming.",
-      de: "Ein Physical-Computing-Projekt mit Arduino, Sensorik und eigener Programmierung.",
-    },
+  en: "An interaction design project combining physical hardware, sensors and custom programming.",
+  de: "Ein Interaktionsdesign-Projekt, das physische Hardware, Sensorik und eigene Programmierung verbindet.",
+},
 
     tools: ["Arduino", "C++", "Sensors"],
 
-    images: ["/projects/arduino-project.jpg"],
+    images: [
+  "/projects/development/greenhouse/greenhouse-1.jpg",
+  "/projects/development/greenhouse/greenhouse-2.jpg",
+  "/projects/development/greenhouse/greenhouse-3.png",
+  "/projects/development/greenhouse/greenhouse-4.png",
+  "/projects/development/greenhouse/greenhouse-5.png",
+  "/projects/development/greenhouse/greenhouse-6.png",
+  "/projects/development/greenhouse/greenhouse-7.png",
+  "/projects/development/greenhouse/greenhouse-8.png",
+  "/projects/development/greenhouse/greenhouse-9.png",
+  "/projects/development/greenhouse/greenhouse-10.png",
+],
 
     details: {
       en: "Development of an interactive hardware project using Arduino and sensor technology.",
