@@ -822,11 +822,33 @@ main {
     font-size: 21px;
   }
 
+  /* Data Flow */
   .project-data-flow {
-    font-size: 12px !important;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: block;
+    width: 100%;
     max-width: 100%;
+
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    padding: 12px 14px;
+  }
+
+  /* Chips */
+  .project-tools {
+    width: 100%;
+    max-width: 100%;
+    gap: 6px;
+  }
+
+  .chip {
+    white-space: normal;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 }
 
