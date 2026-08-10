@@ -1147,13 +1147,14 @@ main {
     font-size: 0.95rem;
   }
 
-  .projects {
-    grid-template-columns: 1fr;
-  }
+.projects {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+}
 
-  .project-card {
-    padding: 32px 0 44px;
-  }
+.project-card {
+  padding: 20px 0 28px;
+}
 
   .project-card-link {
     gap: 24px;
@@ -1163,9 +1164,9 @@ main {
     padding-bottom: 16px;
   }
 
-  .project-info h3 {
-    font-size: 30px;
-  }
+.project-info h3 {
+  font-size: 22px;
+}
 
   .visual-identity-grid {
     grid-template-columns: 1fr;
