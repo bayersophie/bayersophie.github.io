@@ -7,12 +7,10 @@ type PhotographyDetailProps = {
 
 const labels = {
   en: {
-    photography: "Photography",
     selectedWork: "Selected Work",
     aboutProject: "About the Project",
   },
   de: {
-    photography: "Fotografie",
     selectedWork: "Ausgewählte Arbeiten",
     aboutProject: "Über das Projekt",
   },
@@ -32,15 +30,6 @@ function PhotographyDetail({ project, language }: PhotographyDetailProps) {
 
   return (
     <>
-      <section className="photography-intro">
-        <div className="photography-intro-label">
-          <p className="eyebrow">{text.photography}</p>
-        </div>
-
-        <div className="photography-intro-content">
-          <p>{project.description[language]}</p>
-        </div>
-      </section>
 
       <section className="photography-gallery">
         <p className="eyebrow">{text.selectedWork}</p>

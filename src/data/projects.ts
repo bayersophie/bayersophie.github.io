@@ -145,7 +145,7 @@ export const projects: Project[] = [
       de: "Business- und Corporate-Fotografie mit Fokus auf authentischen Porträts, professioneller Bildsprache und natürlichem Storytelling.",
     },
 
-    tools: ["Photography", "Lightroom"],
+    tools: ["Fujifilm XT-4", "Lightroom"],
 
     images: [
       "/projects/photography/corporate/corporate-1.jpg",
@@ -183,7 +183,7 @@ export const projects: Project[] = [
       de: "Babybauchfotografie, die persönliche Momente, natürliche Emotionen und die Verbindung zwischen Menschen festhält.",
     },
 
-    tools: ["Photography", "Lightroom"],
+    tools: ["Fujifilm XT-4", "Lightroom"],
 
     images: [
       "/projects/photography/maternity/maternity-1.jpg",
@@ -218,22 +218,23 @@ export const projects: Project[] = [
       de: "Tierfotografie mit Fokus auf Haustiere, Details und atmosphärische Momente.",
     },
 
-    tools: ["Photography", "Lightroom"],
+    tools: ["Canon EOS 550D", "Lightroom"],
 
     images: [
-      "/projects/photography/animals/animals-1.jpg",
-      "/projects/photography/animals/animals-2.jpg",
-      "/projects/photography/animals/animals-3.jpg",
-      "/projects/photography/animals/animals-4.jpg",
-      "/projects/photography/animals/animals-5.jpg",
-      "/projects/photography/animals/animals-6.jpg",
-      "/projects/photography/animals/animals-7.jpg",
-      "/projects/photography/animals/animals-8.jpg",
+      "/projects/photography/animals/animals-1.webp",
+      "/projects/photography/animals/animals-2.webp",
+      "/projects/photography/animals/animals-3.webp",
+      "/projects/photography/animals/animals-4.webp",
+      "/projects/photography/animals/animals-5.webp",
+      "/projects/photography/animals/animals-6.webp",
+      "/projects/photography/animals/animals-7.webp",
+      "/projects/photography/animals/animals-8.webp",
     ],
 
     details: {
-      en: "A collection of animal photographs exploring personality, natural moments and atmospheric compositions.",
-      de: "Eine Sammlung von Tierfotografien, die Persönlichkeit, natürliche Momente und atmosphärische Bildkompositionen festhält.",
+      en: "This photographic project features animal portraits created during individual photo sessions. The focus is on quiet and natural moments, as well as the careful observation of expression, posture and character.\n\nEach session took place with animals belonging to different owners, requiring me to adapt to different personalities and behaviours. Rather than following fixed poses or routines, I observed the animals and adjusted the composition to suit the individual situation.\n\nThe resulting series captures the individual character of each animal in a natural and understated way.",
+
+      de: "In diesem fotografischen Projekt entstanden Porträtaufnahmen von Tieren im Rahmen individueller Shootings. Der Schwerpunkt liegt auf ruhigen und natürlichen Momenten sowie der bewussten Wahrnehmung von Ausdruck, Haltung und Charakter.\n\nDa jedes Shooting mit Tieren anderer Halter:innen stattfand, musste ich mich auf unterschiedliche Persönlichkeiten und Verhaltensweisen einstellen. Anstatt feste Abläufe vorzugeben, habe ich die Situationen beobachtet und die Bildgestaltung entsprechend angepasst.\n\nDabei entstand eine Serie von Aufnahmen, die den individuellen Charakter der Tiere auf natürliche und zurückhaltende Weise festhält.",
     },
   },
 ];
