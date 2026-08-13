@@ -10,30 +10,46 @@ const labels = {
   de: { aboutProject: "Über das Projekt" },
 };
 
-/**
- * Shared detail layout for projects without a bespoke design
- * (e.g. Arduino, Streaming Layouts). Renders a single hero image
- * plus the project's details text.
- *
- * Falls back gracefully if the image hasn't been uploaded yet.
- */
-function SimpleProjectDetail({ project, language }: SimpleProjectDetailProps) {
+function SimpleProjectDetail({
+  project,
+  language,
+}: SimpleProjectDetailProps) {
   const text = labels[language];
-  const image = project.images[0];
   const detailParagraphs = project.details?.[language].split("\n\n") ?? [];
 
   return (
     <>
-      {image && (
-        <div className="project-page-image">
-          <img
-            src={image}
-            alt={project.title[language]}
-            loading="lazy"
-            onError={(event) => {
-              event.currentTarget.parentElement?.classList.add("is-hidden");
-            }}
-          />
+      {project.images.length > 0 && (
+        <div
+          className={`simple-project-gallery ${
+            project.images.length === 2
+              ? "simple-project-gallery-two"
+              : project.images.length === 4
+              ? "simple-project-gallery-four"
+              : ""
+          }`}
+        >
+          {project.images.map((image, index) => (
+            <div
+              className={`simple-project-gallery-item ${
+                project.images.length === 4 && index === 0
+                  ? "is-featured"
+                  : ""
+              }`}
+              key={image}
+            >
+              <img
+                src={image}
+                alt={`${project.title[language]} – ${index + 1}`}
+                loading="lazy"
+                onError={(event) => {
+                  event.currentTarget.parentElement?.classList.add(
+                    "is-hidden"
+                  );
+                }}
+              />
+            </div>
+          ))}
         </div>
       )}
 

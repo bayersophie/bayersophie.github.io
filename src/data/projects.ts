@@ -119,11 +119,16 @@ export const projects: Project[] = [
 
     tools: ["Photoshop", "Illustrator", "After Effects"],
 
-    images: ["/projects/streaming-layouts.jpg"],
+    images: [
+      "/projects/design/streaming/streaming-1.png",
+      "/projects/design/streaming/streaming-2.png",
+      "/projects/design/streaming/streaming-3.png",
+      "/projects/design/streaming/streaming-4.png",
+    ],
 
     details: {
-      en: "Concept and design of various visual elements for a cohesive Twitch streaming presence.",
-      de: "Konzeption und Gestaltung verschiedener visueller Elemente für einen einheitlichen Twitch-Auftritt.",
+      en: "Design of a complete Twitch stream overlay including a broadcast area, webcam frame, chat window and info panels for Recent Follow and Recent Subscribe. The social media icons are subtly integrated into the bottom bar, keeping the focus on the stream content itself.\n\nThe overlay is complemented by several channel panels, including \"About Me\", \"Instagram\" and \"Hardware\", designed in a consistent dark theme with teal accents. Cohesive typography and decorative frame elements create a recognisable, professional look across the entire channel.",
+      de: "Gestaltung eines kompletten Stream-Overlays für Twitch, bestehend aus Broadcast-Bereich, Webcam-Rahmen, Chat-Fenster und Info-Panels für Recent Follow und Recent Subscribe. Die Social-Media-Icons sind dezent in die untere Leiste integriert, sodass der Fokus klar auf dem Stream-Inhalt bleibt.\n\nErgänzt wird das Overlay durch mehrere Panels für den Kanal, darunter „Über mich\", „Instagram\" und „Hardware\", die in einem einheitlichen dunklen Design mit türkisfarbenen Akzenten gehalten sind. Die durchgängige Typografie und die grafischen Rahmenelemente sorgen für einen wiedererkennbaren, professionellen Look über den gesamten Kanal hinweg.",
     },
   },
 
